@@ -5,6 +5,10 @@ import colors from "colors";
 import morgan from "morgan";
 import mongoose from "mongoose";
 
+
+
+import orderRoutes from "./routes/orderRoutes.js";
+
 dotenv.config();
 
 const app = express();
@@ -15,6 +19,8 @@ if (process.env.NODE_ENV === "development") {
 
 app.use(json({ limit: "30mb", extended: true }));
 app.use(urlencoded({ limit: "30mb", extended: true }));
+
+app.use("/api/orders", orderRoutes);
 
 app.get("/api/config/paypal", (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
