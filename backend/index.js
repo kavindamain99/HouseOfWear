@@ -13,6 +13,10 @@ if (process.env.NODE_ENV === "development") {
   app.use(morgan("dev"));
 }
 
+import productRoutes from "./routes/productRoutes.js";
+import orderRoutes from "./routes/orderRoutes.js";
+import categoryRoutes from "./routes/categoryRoutes.js";
+
 app.use(json({ limit: "30mb", extended: true }));
 app.use(urlencoded({ limit: "30mb", extended: true }));
 
@@ -35,7 +39,9 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(notFound);
 app.use(errorHandler);
-
+app.use("/api/products", productRoutes);
+app.use("/api/categories", categoryRoutes);
+app.use("/api/orders", orderRoutes);
 const PORT = process.env.PORT || 5000;
 
 mongoose
