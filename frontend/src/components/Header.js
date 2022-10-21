@@ -14,6 +14,7 @@ import AccountCircle from '@mui/icons-material/AccountCircle'
 import PersonAddIcon from '@mui/icons-material/PersonAdd'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'
+
 import ReviewsIcon from '@mui/icons-material/Reviews'
 import MoreIcon from '@mui/icons-material/MoreVert'
 import Logout from '@mui/icons-material/Logout'
@@ -62,6 +63,7 @@ const Header = () => {
 
   const isMenuOpen = Boolean(anchorEl)
   const isMobileMenuOpen = Boolean(mobileMoreAnchorEl)
+
 
 import React, { useState, useEffect } from "react";
 import { styled } from "@mui/material/styles";
@@ -143,6 +145,7 @@ const Header = () => {
     setAnchorEl(null)
     setMobileMoreAnchorEl(null)
   }
+
       : setAnchorEl(event.currentTarget);
     setMobileMoreAnchorEl(null);
   };
@@ -181,6 +184,7 @@ const Header = () => {
             aria-label='account of current user'
             aria-controls='primary-search-account-menu'
             aria-haspopup='true'
+
 
         underline="none"
         component={RouterLink}
@@ -228,6 +232,7 @@ const Header = () => {
         </MenuItem>
       </Link>
 
+
       <Link
         underline='none'
         component={RouterLink}
@@ -251,6 +256,7 @@ const Header = () => {
         <ListItemIcon aria-label='logout'>
           <Logout fontSize='small' />
 
+
       <Divider />
       <MenuItem onClick={logoutHandler}>
         <ListItemIcon aria-label="logout">
@@ -272,6 +278,7 @@ const Header = () => {
             aria-label='login link'
             aria-controls='primary-search-account-menu'
             aria-haspopup='true'
+
 
         underline="none"
         component={RouterLink}
@@ -301,6 +308,7 @@ const Header = () => {
             aria-label='register link'
             aria-controls='primary-search-account-menu'
             aria-haspopup='true'
+
 
         underline="none"
         component={RouterLink}
@@ -426,6 +434,33 @@ const Header = () => {
 
   return (
     <>
+      <Link
+        variant='h6'
+        underline='none'
+        component={RouterLink}
+        to='/'
+        sx={{
+          backgroundColor: '#171717',
+          color: '#c9c9c9',
+          '&:hover': {
+            color: 'white',
+          },
+          '&:active': {
+            color: 'white',
+          },
+          '&:focus': {
+            color: 'white',
+          },
+          mx: 'auto',
+          justifyContent: 'center',
+          display: { xs: 'flex', sm: 'none' },
+          fontFamily: 'Playfair Display',
+          position: 'relative',
+          zIndex: 1400,
+        }}
+      >
+        HOUSE OF WEAR
+
       
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
@@ -571,6 +606,10 @@ const Header = () => {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar
           sx={{
+            backgroundColor: '#171717',
+            color: '#f5f5f7',
+            position: 'relative',
+
             backgroundColor: "#171717",
             color: "#f5f5f7",
             position: "relative",
@@ -586,6 +625,7 @@ const Header = () => {
               sx={{ mr: 2 }}
               onClick={() => {
                 setSideNav(!sideNav)
+
 
               size="large"
               edge="start"
@@ -617,6 +657,7 @@ const Header = () => {
                 '&:focus': {
                   color: 'white',
 
+
               variant="h6"
               underline="none"
               component={RouterLink}
@@ -638,6 +679,7 @@ const Header = () => {
               }}
               style={{ flex: 1 }}
             >
+
               House Of Wear
             </Link>
 
@@ -659,7 +701,7 @@ const Header = () => {
                   aria-label='show 4 cart items'
                   color='inherit'
                 >
-                  <Badge badgeContent={cartLength} color='error'>
+
 
             {/* <Box sx={{ display: { xs: "none", md: "flex" } }}>
               <Link
@@ -684,6 +726,7 @@ const Header = () => {
                 aria-label='account of current user'
                 aria-controls={menuId}
                 aria-haspopup='true'
+
                 size="large"
                 edge="end"
                 aria-label="account of current user"
@@ -702,7 +745,6 @@ const Header = () => {
                 aria-haspopup='true'
                 onClick={handleMobileMenuOpen}
                 color='inherit'
-
             </Box> */}
             <Box sx={{ display: { xs: "flex", md: "none" } }}>
               <StyledIconButton
@@ -721,6 +763,7 @@ const Header = () => {
         {renderMobileMenu}
         {renderMenu}
 
+
         {/* {renderMobileMenu}
         {renderMenu} */}
         <SideNav
@@ -734,8 +777,7 @@ const Header = () => {
 }
 
 export default Header
-
   );
 };
 
-export default Header;
+

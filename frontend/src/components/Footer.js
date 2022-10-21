@@ -1,23 +1,24 @@
-import React from "react";
-import { Typography } from "@mui/material";
+import React from 'react'
+import { Typography } from '@mui/material'
 
 const Footer = () => {
-  const year = new Date().getFullYear();
+  const year = new Date().getFullYear()
   return (
     <footer>
       <Typography
-        variant="body1"
+        variant='body1'
         sx={{
-          textAlign: "center",
+          textAlign: 'center',
           py: 2,
-          backgroundColor: "#171717",
-          color: "#c9c9c9",
+          backgroundColor: '#171717',
+          color: '#c9c9c9',
         }}
       >
-        Copyright &copy; House Of Wear @{year}
+        {/* Copyright &copy; MazenElabd @{year} */}
+        House of Wear
       </Typography>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer
