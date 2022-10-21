@@ -70,7 +70,7 @@ export const getOrderDetails = (id) => async (dispatch, getState) => {
     dispatch({
       type: ORDER_DETAILS_REQUEST,
     })
-    
+
     const {
       userLogin: { userInfo },
     } = getState()

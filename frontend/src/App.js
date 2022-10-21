@@ -27,6 +27,21 @@ const Reviews = lazy(() => import('./screens/Reviews'))
 const Enquiry = lazy(() => import('./screens/Enquiry'))
 const editEnquiry = lazy(() => import('./screens/editEnquiry'))
 
+import Loader from "./components/Loader";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+const Login = lazy(() => import("./screens/Login"));
+const Register = lazy(() => import("./screens/Register"));
+const Profile = lazy(() => import("./screens/Profile"));
+const CreateProduct = lazy(() => import("./screens/CreateProduct"));
+const Home = lazy(() => import("./screens/Home"));
+const Product = lazy(() => import("./screens/Product"));
+const OrderList = lazy(() => import("./screens/OrderList"));
+const ProductList = lazy(() => import("./screens/ProductList"));
+const ProductEdit = lazy(() => import("./screens/ProductEdit"));
+const CategoryList = lazy(() => import("./screens/CategoryList"));
+const CreateCategory = lazy(() => import("./screens/CreateCategory"));
+const CategoryEdit = lazy(() => import("./screens/CategoryEdit"));
 export const App = () => {
   return (
     <Suspense fallback={<Loader />} >
@@ -73,6 +88,7 @@ export const App = () => {
           </Switch>
         </main>
         <Footer />
+
       </BrowserRouter>
     </Suspense>
   )
