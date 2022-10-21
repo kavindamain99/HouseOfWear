@@ -23,6 +23,7 @@ const CategoryList = lazy(() => import('./screens/CategoryList'))
 const CreateCategory = lazy(() => import('./screens/CreateCategory'))
 const CategoryEdit = lazy(() => import('./screens/CategoryEdit'))
 
+const Reviews = lazy(() => import('./screens/Reviews'))
 const Enquiry = lazy(() => import('./screens/Enquiry'))
 const editEnquiry = lazy(() => import('./screens/editEnquiry'))
 
@@ -35,6 +36,9 @@ export const App = () => {
           <Switch >
             <Route path='/order/:id' component={Order} />
             <Route path='/myorders' component={MyOrders} />
+            <Route path='/reviews' component={Reviews} />
+            <Route path='/Enquiry' component={Enquiry} />
+            <Route path='/editEnquiry' component={editEnquiry} />
             <Route path='/shipping' component={Shipping} />
             <Route path='/placeorder' component={PlaceOrder} />
             <Route path='/login' component={Login} />
