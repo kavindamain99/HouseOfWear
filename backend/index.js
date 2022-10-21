@@ -5,6 +5,10 @@ import colors from "colors";
 import morgan from "morgan";
 import mongoose from "mongoose";
 
+
+
+import orderRoutes from "./routes/orderRoutes.js";
+
 dotenv.config();
 
 const app = express();
@@ -19,6 +23,8 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 
 app.use(json({ limit: "30mb", extended: true }));
 app.use(urlencoded({ limit: "30mb", extended: true }));
+
+app.use("/api/orders", orderRoutes);
 
 app.get("/api/config/paypal", (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
@@ -39,6 +45,10 @@ if (process.env.NODE_ENV === "production") {
 
 app.use(notFound);
 app.use(errorHandler);
+
+app.use("/api/addresses", addressRoutes);
+
+
 app.use("/api/products", productRoutes);
 app.use("/api/categories", categoryRoutes);
 app.use("/api/orders", orderRoutes);
