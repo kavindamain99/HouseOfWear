@@ -12,5 +12,5 @@ const Loader = () => {
     </Backdrop>
   )
 }
- 
+
 export default Loader
