@@ -6,3 +6,4 @@ const Alerts = ({ severity, message }) => {
 }
 
 export default Alerts
+
